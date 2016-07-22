@@ -3,7 +3,7 @@ apt
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-apt.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-apt)
 
-Install dependendencies for the apt module.
+Install the dependendencies for the apt module.
 
 http://docs.ansible.com/ansible/apt_module.html#requirements-on-host-that-executes-module
 
