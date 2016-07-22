@@ -1,0 +1,3 @@
+---
+# defaults file for apt
+apt_install_aptitude: no  # Whether install aptitude or not.

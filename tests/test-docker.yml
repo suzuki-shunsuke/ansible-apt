@@ -1,0 +1,28 @@
+# test-docker.yml
+# test playbook using the Docker container.
+# This test will create a Docker container.
+#
+# $ ansible-playbook tests/test-docker.yml
+#
+- name: start docker
+  hosts: localhost
+  connection: local
+  vars:
+    base_image: suzukishunsuke/python2:ubuntu1604-0.1.1
+    docker_hostname: test-apt
+  tasks:
+    - name: start docker
+      docker_container:
+        image: "{{ base_image }}"
+        name: "{{ docker_hostname }}"
+        detach: yes
+        tty: yes
+        command: bash
+    - name: Add host
+      add_host: name={{ docker_hostname }}
+- name: test with docker
+  hosts: test-apt
+  connection: docker
+  vars:
+  roles:
+    - { role: ansible-apt, apt_install_aptitude: no }

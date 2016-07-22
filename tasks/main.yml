@@ -1,0 +1,15 @@
+---
+# tasks file for apt
+- name: Install python-apt
+  apt: 
+    name: python-apt
+    update_cache: yes
+    install_recommends: no
+  become: "{{ apt_nonroot }}"
+- name: Install aptitude
+  apt: 
+    name: aptitude
+    update_cache: yes
+    install_recommends: no
+  become: "{{ apt_nonroot }}"
+  when: apt_install_aptitude
