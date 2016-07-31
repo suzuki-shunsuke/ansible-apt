@@ -8,13 +8,9 @@ dist: trusty
 addons:
   apt:
     packages:
-    - python-pip
+    - ansible
 
-before_install: cd tests
-
-install:
-- pip install ansible
-- ansible --version
+before_script: cd tests
 
 script:
 - ansible-playbook test.yml
