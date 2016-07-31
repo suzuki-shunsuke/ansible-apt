@@ -10,7 +10,9 @@ addons:
     packages:
     - ansible
 
-before_script: cd tests
+before_script:
+- cd tests
+- ansible --version
 
 script:
 - ansible-playbook test.yml
