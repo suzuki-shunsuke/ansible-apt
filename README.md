@@ -34,10 +34,10 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-      - { role: suzuki-shunsuke.apt, apt_install_aptitude: yes }
+  - { role: suzuki-shunsuke.apt, apt_install_aptitude: yes }
 ```
 
 License
 -------
 
-BSD
+MIT

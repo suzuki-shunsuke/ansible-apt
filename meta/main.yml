@@ -3,7 +3,7 @@ galaxy_info:
   description: Install the dependendencies for the apt module
   company:
   issue_tracker_url: http://github.com/suzuki-shunsuke/ansible-apt/issues
-  license: license (GPLv2, CC-BY, etc)
+  license: MIT
   min_ansible_version: 1.2
   github_branch: master
   platforms:
