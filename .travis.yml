@@ -9,16 +9,16 @@ addons:
   apt:
     packages:
     - python-pip
+    - python-apt
 
 before_install: cd tests
 
 install:
-  - pip install ansible
-
-  - ansible --version
+- pip install ansible
+- ansible --version
 
 script:
-  - ansible-playbook test.yml
+- ansible-playbook test.yml
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
