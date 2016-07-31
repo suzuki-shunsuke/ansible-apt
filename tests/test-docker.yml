@@ -24,5 +24,14 @@
   hosts: test-apt
   connection: docker
   vars:
+  tasks:
+  - name: uninstall python-apt
+    apt:
+      name: python-apt
+      state: absent
+- name: test with docker
+  hosts: test-apt
+  connection: docker
+  vars:
   roles:
-    - { role: ansible-apt, apt_install_aptitude: no }
+  - { role: ansible-apt, apt_install_aptitude: no }
