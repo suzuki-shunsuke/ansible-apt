@@ -1,6 +1,13 @@
 apt
 =========
 
+## Deprecated
+
+This role is deprecated.
+This role is nonsense because apt module will install python-apt if it is not installed.
+
+---
+
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-apt.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-apt)
 
 Install the dependendencies for the apt module.
